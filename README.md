@@ -26,20 +26,33 @@ git clone https://github.com/<your-username>/IITJ-Study-Material.git
 cd IITJ-Study-Material
 ```
 
-### Step 3: Add Your Files
+### Step 3: Create a Personal Folder (Important!)
 
-1. Navigate to the appropriate subject folder
+To avoid merge conflicts with other contributors, **create a folder with your name** inside the subject folder before adding your files.
+
+```bash
+# Example: Create your own folder inside VCC
+mkdir -p "VCC/<your-name>"
+
+# e.g., mkdir -p "VCC/Samnit-Mehandiratta"
+```
+
+This ensures everyone works in their own space and PRs don't conflict with each other.
+
+### Step 4: Add Your Files
+
+1. Navigate to your personal folder inside the appropriate subject folder
 2. Add your files (PDFs, notes, presentations, etc.)
 
 ```bash
-# Example: Add a PDF to the VCC folder
-cp /path/to/your/file.pdf "VCC/"
+# Example: Add a PDF to your personal folder
+cp /path/to/your/file.pdf "VCC/<your-name>/"
 
-# Or create a new subfolder for a specific topic
-mkdir -p "VCC/Lecture Notes"
+# Or create subfolders for specific topics
+mkdir -p "VCC/<your-name>/Lecture Notes"
 ```
 
-### Step 4: Commit and Push to Your Fork
+### Step 5: Commit and Push to Your Fork
 
 ```bash
 git add .
@@ -47,7 +60,7 @@ git commit -m "Add [file/topic] to [subject name]"
 git push origin main
 ```
 
-### Step 5: Create a Pull Request
+### Step 6: Create a Pull Request
 
 1. Go to the **original repository** ([samnitmehandiratta/IITJ-Study-Material](https://github.com/samnitmehandiratta/IITJ-Study-Material))
 2. Click the **Pull Requests** tab
@@ -61,17 +74,19 @@ git push origin main
 ### Alternative: Via GitHub Web Interface
 
 1. Fork the repository on GitHub
-2. Navigate to the desired folder in your fork
-3. Click **Add file** → **Upload files**
-4. Drag and drop your files
-5. Commit the changes
-6. Click **Contribute** → **Open Pull Request**
+2. Navigate to the desired subject folder in your fork
+3. **Create a folder with your name** (click **Add file** → **New file**, then type `Your-Name/` to create a folder)
+4. Click **Add file** → **Upload files** inside your folder
+5. Drag and drop your files
+6. Commit the changes
+7. Click **Contribute** → **Open Pull Request**
 
 ## 📝 Guidelines
 
+- **Always create a personal folder** inside the subject directory to avoid merge conflicts
 - Name your files clearly (e.g., `Lecture-01-Introduction.pdf`)
 - Keep file sizes reasonable (< 25 MB per file)
-- Organize content into logical subfolders if needed
+- Organize content into logical subfolders within your personal folder
 - One pull request per subject/topic is preferred
 
 ## ❓ Need Help?
